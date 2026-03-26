@@ -287,82 +287,82 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Code Snippets — How to Use Free LLM APIs with the OpenAI SDK
 
-  All **OpenAI-compatible free LLM APIs** work with the same pattern. Just swap `base_url` and `api_key` — no new SDK to learn:
+   All **OpenAI-compatible free LLM APIs** work with the same pattern. Just swap `base_url` and `api_key` — no new SDK to learn:
 
-  ```python
-  from openai import OpenAI
+```python
+from openai import OpenAI
 
-  # Swap these two lines to switch provider
-  BASE_URL = "https://api.groq.com/openai/v1"   # Groq
-  API_KEY  = "your-groq-key"
+# Swap these two lines to switch provider
+BASE_URL = "https://api.groq.com/openai/v1"   # Groq
+API_KEY  = "your-groq-key"
 
-  client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
-  response = client.chat.completions.create(
-      model="llama-3.3-70b-versatile",           # change model per provider
-          messages=[{"role": "user", "content": "Hello!"}],
-          )
+response = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",           # change model per provider
+    messages=[{"role": "user", "content": "Hello!"}],
+)
 
-          print(response.choices[0].message.content)
-          ```
+print(response.choices[0].message.content)
+```
 
-          **Provider base URLs:**
+**Provider base URLs:**
 
-          ```python
-          PROVIDERS = {
-              "groq":       ("https://api.groq.com/openai/v1",                    "llama-3.3-70b-versatile"),
-                  "cerebras":   ("https://api.cerebras.ai/v1",                        "llama-3.3-70b"),
-                      "openrouter": ("https://openrouter.ai/api/v1",                      "meta-llama/llama-3.3-70b-instruct:free"),
-                          "mistral":    ("https://api.mistral.ai/v1",                         "mistral-small-latest"),
-                              "gemini":     ("https://generativelanguage.googleapis.com/v1beta/openai/", "gemini-2.0-flash"),
-                                  "github":     ("https://models.inference.ai.azure.com",             "gpt-4o"),
-                                      "nvidia":     ("https://integrate.api.nvidia.com/v1",               "meta/llama-3.3-70b-instruct"),
-                                          "huggingface":("https://api-inference.huggingface.co/v1",           "meta-llama/Llama-3.3-70B-Instruct"),
-                                              "zhipu":      ("https://open.bigmodel.cn/api/paas/v4/",             "glm-4-flash"),
-                                                  "pollinations":("https://gen.pollinations.ai/v1",                   "openai-large"),  # no key needed for basic use
-                                                  }
-                                                  ```
+```python
+PROVIDERS = {
+    "groq":        ("https://api.groq.com/openai/v1",                     "llama-3.3-70b-versatile"),
+    "cerebras":    ("https://api.cerebras.ai/v1",                         "llama-3.3-70b"),
+    "openrouter":  ("https://openrouter.ai/api/v1",                       "meta-llama/llama-3.3-70b-instruct:free"),
+    "mistral":     ("https://api.mistral.ai/v1",                          "mistral-small-latest"),
+    "gemini":      ("https://generativelanguage.googleapis.com/v1beta/openai/", "gemini-2.0-flash"),
+    "github":      ("https://models.inference.ai.azure.com",              "gpt-4o"),
+    "nvidia":      ("https://integrate.api.nvidia.com/v1",                "meta/llama-3.3-70b-instruct"),
+    "huggingface": ("https://api-inference.huggingface.co/v1",            "meta-llama/Llama-3.3-70B-Instruct"),
+    "zhipu":       ("https://open.bigmodel.cn/api/paas/v4/",              "glm-4-flash"),
+    "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
+}
+```
 
-                                                  ---
+---
 
-                                                  ## Notes & Definitions
+## Notes & Definitions
 
-                                                  - **RPM** = requests per minute · **RPD** = requests per day · **TPM** = tokens per minute
-                                                  - "Limits undocumented" means the provider does not publicly publish rate limits — expect throttling.
-                                                  - All providers marked ✅ OpenAI Compat work with the `openai` Python/JS SDK by changing `base_url`.
-                                                  - Providers marked ⚠️ Partial have their own SDK or require minor request format changes.
-                                                  - **Trial credits and time-limited promos are excluded** — only permanent free tiers are listed.
-                                                  - Entries verified as of **March 2026**. Rate limits change frequently — always check provider docs.
+- **RPM** = requests per minute · **RPD** = requests per day · **TPM** = tokens per minute
+- "Limits undocumented" means the provider does not publicly publish rate limits — expect throttling.
+- All providers marked ✅ OpenAI Compat work with the `openai` Python/JS SDK by changing `base_url`.
+- Providers marked ⚠️ Partial have their own SDK or require minor request format changes.
+- **Trial credits and time-limited promos are excluded** — only permanent free tiers are listed.
+- Entries verified as of **March 2026**. Rate limits change frequently — always check provider docs.
 
-                                                  ---
+---
 
-                                                  ## Related Resources
+## Related Resources
 
-                                                  Looking for something specific? These searches might help:
+Looking for something specific? These searches might help:
 
-                                                  - **Free OpenAI-compatible APIs** → filter the table above by ✅ OpenAI Compat
-                                                  - **Fastest free LLM API** → see [Groq](#groq-) and [Cerebras](#cerebras-)
-                                                  - **Free API with no sign-up** → see [Pollinations AI](#pollinations-ai-)
-                                                  - **Free LLM API for images** → see [Pollinations AI](#pollinations-ai-)
-                                                  - **Free LLM API for Europe** → see [Mistral AI](#mistral-ai-) (EU-based, no region block)
-                                                  - **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
-                                                  - **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
+- **Free OpenAI-compatible APIs** → filter the table above by ✅ OpenAI Compat
+- **Fastest free LLM API** → see [Groq](#groq) and [Cerebras](#cerebras)
+- **Free API with no sign-up** → see [Pollinations AI](#pollinations-ai)
+- **Free LLM API for images** → see [Pollinations AI](#pollinations-ai)
+- **Free LLM API for Europe** → see [Mistral AI](#mistral-ai) (EU-based, no region block)
+- **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
+- **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
 
-                                                  ---
+---
 
-                                                  ## Contributing to awesome-free-llm-apis
+## Contributing to awesome-free-llm-apis
 
-                                                  See [contributing.md](contributing.md) for the full guide. The short version:
+See [contributing.md](contributing.md) for the full guide. The short version:
 
-                                                  1. Fork this repo
-                                                  2. Add your entry following the existing format (table + all fields)
-                                                  3. Include a link to the provider's official rate limit documentation
-                                                  4. Open a pull request — add the current month/year you verified it
+1. Fork this repo
+2. Add your entry following the existing format (table + all fields)
+3. Include a link to the provider's official rate limit documentation
+4. Open a pull request — add the current month/year you verified it
 
-                                                  **Rules:** No trial credits. No invite-only access. No entries missing rate limits without noting "undocumented". One entry per provider.
+**Rules:** No trial credits. No invite-only access. No entries missing rate limits without noting "undocumented". One entry per provider.
 
-                                                  ---
+---
 
-                                                  ## License
+## License
 
-                                                  [CC0 1.0](license) — public domain. Use freely, no attribution required.
+[CC0 1.0](license) — public domain. Use freely, no attribution required.
