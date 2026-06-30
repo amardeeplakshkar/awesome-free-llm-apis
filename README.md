@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-12-orange)
+![Providers](https://img.shields.io/badge/providers-13-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -14,7 +14,7 @@
 
 ## Why This List — The Most Detailed Free LLM API Directory
 
-Most "free LLM API" lists give you a name and a link. This one gives you everything you need to decide *before* you sign up — so you're not hunting across 12 different docs pages to compare rate limits, SDK support, and OpenAI compatibility:
+Most "free LLM API" lists give you a name and a link. This one gives you everything you need to decide *before* you sign up — so you're not hunting across 13 different docs pages to compare rate limits, SDK support, and OpenAI compatibility:
 
 | Column | What it means |
 |---|---|
@@ -119,6 +119,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | **OpenAI Compat** | ✅ Yes — `https://api.groq.com/openai/v1` |
   | **SDKs** | Python (`groq`), JS/TS (`groq`), REST |
   | **Speed Tier** | 🟢 Fast — LPU hardware, consistently 300–500 tok/sec |
+
+  ---
+
+  ### [AnyAPI](https://anyapi.ai) 🇺🇸
+
+  > Free LLM API gateway with access to curated open-source models via a single API key. No credit card required.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | Llama 3.3 70B, Qwen3 Coder, QwQ 32B, Gemma 4, Nemotron-3 Super, Mistral Small 3.1, DeepSeek Chat, GPT-OSS-120B + many more |
+  | **Rate Limits** | 20 RPM · 200 RPD |
+  | **OpenAI Compat** | ✅ Yes — `https://api.anyapi.ai/v1` |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium |
 
   ---
 
@@ -264,7 +278,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 12 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 13 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -273,6 +287,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Cohere | Command A | 20 | ~33/day | ⚠️ | 🟡 |
   | Zhipu AI | GLM-4.7-Flash | — | — | ✅ | 🟡 |
   | Groq | Llama 3.3 70B | 30 | 14,400 | ✅ | 🟢 |
+  | AnyAPI | Llama 3.3 70B | 20 | 200 | ✅ | 🟡 |
   | Cerebras | Qwen3 235B | 30 | 14,400 | ✅ | 🟢 |
   | OpenRouter | Qwen3 Coder 480B | 20 | 200 | ✅ | 🟡 |
   | GitHub Models | GPT-4o | 10–15 | 50–150 | ✅ | 🟡 |
@@ -311,6 +326,7 @@ print(response.choices[0].message.content)
 ```python
 PROVIDERS = {
     "groq":        ("https://api.groq.com/openai/v1",                     "llama-3.3-70b-versatile"),
+    "anyapi":      ("https://api.anyapi.ai/v1",                           "meta-llama/llama-3.3-70b-instruct"),
     "cerebras":    ("https://api.cerebras.ai/v1",                         "llama-3.3-70b"),
     "openrouter":  ("https://openrouter.ai/api/v1",                       "meta-llama/llama-3.3-70b-instruct:free"),
     "mistral":     ("https://api.mistral.ai/v1",                          "mistral-small-latest"),
