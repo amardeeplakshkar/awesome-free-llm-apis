@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -264,6 +264,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [UnoRouter](https://unorouter.com/token) 🇩🇪
+
+  > Open source gateway: one API key for 200+ models, 190+ of them with a permanent free tier (`:free` suffix). No credit card, Discord or GitHub sign-in.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | DeepSeek V4 Flash/Pro, GLM 5.2, Qwen3.5 397B, Nemotron 3 Ultra, Kimi, Mistral + 180 more (models ending in `:free`) |
+  | **Rate Limits** | ~1 RPM per model per user · 429 + Retry-After on the cap · rotate models for throughput |
+  | **OpenAI Compat** | ✅ Yes — `https://api.unorouter.com/v1` (plus Anthropic `/v1/messages` and Gemini `/v1beta` native) |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium — shared free pools, drained models recover automatically |
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
@@ -278,7 +292,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 13 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 14 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -295,6 +309,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Hugging Face | Llama 3.3 70B | — | credit-based | ✅ | 🔴 |
   | Cloudflare Workers AI | Llama 3.3 70B | — | 10K neurons | ⚠️ | 🟡 |
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
+  | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
