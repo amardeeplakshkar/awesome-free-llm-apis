@@ -324,7 +324,8 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Hugging Face | Llama 3.3 70B | — | credit-based | ✅ | 🔴 |
   | Cloudflare Workers AI | Llama 3.3 70B | — | 10K neurons | ⚠️ | 🟡 |
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
-  | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
+  | [Gracestack](https://tools.gracestack.se/api-docs.html) | DeepSeek V4 Pro (A100) | 50 | 50 (free) / 100 (paid) | ✅ | 🟢 |
+| UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
