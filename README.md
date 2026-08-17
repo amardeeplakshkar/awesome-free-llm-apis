@@ -262,6 +262,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [OpenClaw AI](https://ai.trxenergy.vip) 🌐
+
+  > Fully self-hosted OpenAI-compatible inference gateway. No account, no API key, no credit card — every IP gets 50,000 sats of free credits per day, then pay-per-token over Lightning (L402). Last verified: Aug 2026.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | deepseek-r1, qwen3.6-27b, codellama-13b, llama3, llama2, openchat-7b, qwen2.5-1.5b |
+  | **Rate Limits** | 50,000 sats free/day/IP (L402 free tier; ~50M tokens at 1 sat/1k) — [documented in llms.txt](https://ai.trxenergy.vip/llms.txt) |
+  | **OpenAI Compat** | ✅ Yes — `https://ai.trxenergy.vip/v1` |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium |
+
+  ---
+
   ### [Pollinations AI](https://enter.pollinations.ai) 🇩🇪
 
   > Berlin-based open-source platform. Unique in covering **text, image, video, and audio** generation all under one free API. No sign-up required for basic use — just hit the endpoint. API key unlocks higher limits and model access.
