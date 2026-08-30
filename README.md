@@ -394,6 +394,7 @@ Looking for something specific? These searches might help:
 - **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
 - **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
 - **Which keyless endpoints are answering right now** → [stillworks](https://stillworks.supercapybara.com) — Directories list. We check. Endpoints probed on a schedule with a real chat completion, failures published next to the successes
+- **How to tell if a cheap reseller is actually serving the model you asked for** → [free-ai-api-list](https://github.com/robertclaw496-alt/free-ai-api-list#checking-that-a-provider-really-serves-the-model-it-claims) — two behavioural probes you can run yourself: ask for a hard token cap and compare byte-identical replies across model names
 
 ---
 
