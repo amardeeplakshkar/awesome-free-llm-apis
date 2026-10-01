@@ -291,7 +291,22 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | **Speed Tier** | 🟡 Medium — shared free pools, drained models recover automatically |
 
   ---
+  
+### [KeyoAPI](https://www.keyoapi.xyz/free-models) 🌐
 
+> OpenAI-compatible AI API relay. Four model IDs are permanently $0 (no credit card, not an expiring trial). Free traffic is fair-use / lower priority — not an unlimited production SLA.
+
+| Detail | Info |
+|---|---|
+| **Free Models** | `deepseek-v4-pro-free`, `deepseek-v4-flash-free`, `glm-5.2-free`, `kimi-k3-free` |
+| **Rate Limits** | Fair-use rate/concurrency limits on the free channel (exact RPM undocumented; can tighten under abuse) |
+| **OpenAI Compat** | ✅ Yes — `https://www.keyoapi.xyz/v1` |
+| **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+| **Speed Tier** | 🟡 Medium — shared free channel, lower priority than paid |
+
+> 💡 Paid bare model IDs (same families, token-metered) are available for production. Free overview: [free-models](https://www.keyoapi.xyz/free-models).
+
+  ---
   ### [Requesty](https://app.requesty.ai/api-keys) 🇬🇧
 
   > LLM gateway with a permanent free plan: one key for the free models in the catalog, 200 requests per day, no credit card and no trial expiry. This entry was live tested in September 2026.
