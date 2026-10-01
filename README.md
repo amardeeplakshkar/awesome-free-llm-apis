@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-17-orange)
+![Providers](https://img.shields.io/badge/providers-18-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -292,6 +292,22 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [Requesty](https://app.requesty.ai/api-keys) 🇬🇧
+
+  > LLM gateway with a permanent free plan: one key for the free models in the catalog, 200 requests per day, no credit card and no trial expiry. This entry was live tested in September 2026.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | Nemotron 3 Ultra 550B, Nemotron 3 Super 120B, Gemma 4 31B, Leanstral 1.5, Nemotron 3.5 Lightning + 7 more (12 chat models priced at 0 in the [model list](https://www.requesty.ai/free-models)) |
+  | **Rate Limits** | 200 RPD shared across free models ([source](https://www.requesty.ai/free-models)) |
+  | **OpenAI Compat** | ✅ Yes, `https://router.requesty.ai/v1` |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium |
+
+  > ⚠️ Requesty's model list marks the free NVIDIA and Poolside hosted models (Nemotron, Muse Glimmer, Laguna) as retaining inputs for 30 days and using them for training, under the NVIDIA API Trial and Poolside terms. Gemma 4 31B and Leanstral 1.5 are not used for training. Avoid sending personal or confidential prompts to the flagged models. [Check each model's data terms →](https://www.requesty.ai/free-models)
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
@@ -306,7 +322,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 15 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -325,6 +341,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Cloudflare Workers AI | Llama 3.3 70B | — | 10K neurons | ⚠️ | 🟡 |
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
+  | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
@@ -366,6 +383,7 @@ PROVIDERS = {
     "huggingface": ("https://api-inference.huggingface.co/v1",            "meta-llama/Llama-3.3-70B-Instruct"),
     "zhipu":       ("https://open.bigmodel.cn/api/paas/v4/",              "glm-4-flash"),
     "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
+    "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
 }
 ```
 
