@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty, FreeAIapikey
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -148,7 +148,21 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | **SDKs** | Python (`cerebras-cloud-sdk`), REST |
   | **Speed Tier** | 🟢 Fast — wafer-scale chip, comparable to Groq |
 
+  ### [FreeAIapikey](https://freeaiapikey.com/dashboard) 🇮🇳
+
+  > OpenAI-compatible gateway offering frontier models (OpenAI + Anthropic families) at reduced prices, with a permanent free tier.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | GPT-5.5, GPT-5.6 Sol, GPT-6 Sol, GPT-6 Astra, Claude Opus 4.7/4.8/5/5.5, Claude Sonnet 5 |
+  | **Rate Limits** | 100K free tokens/day (free plan, verified accounts) · paid plans from $10/mo |
+  | **OpenAI Compat** | ✅ Yes — `https://api.freeaiapikey.com/v1` |
+  | **Credit Card** | ❌ Not required — $2 free credit on signup |
+  | **SDKs** | Any OpenAI SDK, REST |
+
   ---
+
+---
 
   ### [OpenRouter](https://openrouter.ai/keys) 🇺🇸
 
@@ -336,7 +350,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 17 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -347,6 +361,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Groq | Llama 3.3 70B | 30 | 14,400 | ✅ | 🟢 |
   | AnyAPI | Llama 3.3 70B | 20 | 200 | ✅ | 🟡 |
   | Cerebras | Qwen3 235B | 30 | 14,400 | ✅ | 🟢 |
+  | FreeAIapikey | GPT-6 Astra / Claude Opus 5.5 | 20 | 100K tokens/day | ✅ | 🟡 |
   | OpenRouter | Qwen3 Coder 480B | 20 | 200 | ✅ | 🟡 |
   | Api.Airforce | GPT-OSS-120B | — | — | ✅ | 🟢 |
   | GitHub Models | GPT-4o | 10–15 | 50–150 | ✅ | 🟡 |
