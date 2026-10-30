@@ -322,6 +322,22 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [NovAI](https://aiapi-pro.com/free) 🇭🇰
+
+  > OpenAI-compatible gateway for Chinese frontier models (DeepSeek, Qwen, GLM, Kimi, MiniMax, Doubao, Hunyuan). A permanent free tier covers five small models; no credit card and no Chinese phone number required.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | GLM-4.7-Flash, GLM-4.6V-Flash, GLM-4.1V-Thinking-Flash, CogView3-Flash (image), CogVideoX-Flash (video) |
+  | **Rate Limits** | 5 RPM · 10 RPD shared across the five free models · max 5 video generations/day ([documented limits](https://aiapi-pro.com/free)) |
+  | **OpenAI Compat** | ✅ Yes — `https://aiapi-pro.com/v1` |
+  | **SDKs** | Any OpenAI-compatible SDK (Python, JS/TS, Go); no vendor-specific SDK |
+  | **Speed Tier** | 🟡 Medium — gateway to upstream providers; per-model p50/p90 [measured here](https://aiapi-pro.com/blog/model-latency-measured-2026) |
+
+  > The five free models are permanent, not a trial. A separate $2 signup credit applies to paid models only.
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
