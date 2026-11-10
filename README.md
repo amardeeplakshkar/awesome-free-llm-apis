@@ -322,6 +322,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [cheapllm.shop](https://cheapllm.shop/signup) 🇫🇷
+
+  > Small inference service for one model, DeepSeek V4.1 Flash 1017. Currently in beta: free with no rate limit while the beta runs. After the beta every account keeps a permanent free tier (email sign-up, no credit card). Disclosure: added by the operator.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | DeepSeek V4.1 Flash 1017 (`deepseek-v4.1-flash-1017`, text + image input, reasoning) |
+  | **Rate Limits** | None during the beta · afterwards at least 5,000 input + 1,000 output tokens per hour per account ([source](https://cheapllm.shop/docs#free-tier)) |
+  | **OpenAI Compat** | ✅ Yes, `https://cheapllm.shop/v1` (plus Anthropic `/v1/messages` and `/v1/responses`) |
+  | **SDKs** | Python (via `openai` or `anthropic`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium, requests queue instead of returning 429 when busy |
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
@@ -336,7 +350,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 17 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -356,6 +370,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
+  | cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
