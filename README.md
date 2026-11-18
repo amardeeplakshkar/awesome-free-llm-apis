@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty, Synap
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -322,6 +322,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [Synap](https://synap402.com/login) 🇺🇸
+
+  > Self-hosted OpenAI-compatible gateway. Free tier runs on Linkrra-operated GPUs, not a resold third-party backend. Full allowance for the first 7 days of an account, then a lower permanent tier — no card either way.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | qwen3-coder-30b (one free model; paid BYOK/credits unlock the rest of the catalog) |
+  | **Rate Limits** | First 7 days: 100,000 tokens/day · 50 RPD. After: 50,000 tokens/day · 10 RPD, permanently (not a trial expiry). 10 RPM per key — [live terms](https://synap402.com/api/account/free-tier) |
+  | **OpenAI Compat** | ✅ Yes — `https://synap402.com/v1` |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium — standard cloud GPUs |
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
@@ -336,7 +350,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 17 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -356,8 +370,9 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
+  | Synap | qwen3-coder-30b | 10 | 50→10* | ✅ | 🟡 |
 
-  > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
+  > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped. Synap's RPD is 50/day for the first 7 days of an account, then 10/day permanently (also token-capped: 100,000/day → 50,000/day).
 
   ---
 
