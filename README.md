@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-18-orange)
+![Providers](https://img.shields.io/badge/providers-20-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty, Synap
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -322,6 +322,20 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [Synap](https://synap402.com/login) 🇺🇸
+
+  > Self-hosted OpenAI-compatible gateway. Free tier runs on Linkrra-operated GPUs, not a resold third-party backend — no card required. Capped per account and per network address, whichever is reached first ([live terms](https://synap402.com/api/account/free-tier)).
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | qwen3-coder-30b (one free model; paid BYOK/credits unlock the rest of the catalog) |
+  | **Rate Limits** | 50,000 tokens/day · 10 RPD, permanently. 10 RPM per key. Also capped network-wide at 300,000 tokens/day · 150 RPD across all accounts — [live terms](https://synap402.com/api/account/free-tier) |
+  | **OpenAI Compat** | ✅ Yes — `https://synap402.com/v1` |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium — standard cloud GPUs |
+
+  ---
+
   ## Speed Tier Legend
 
   | Tier | Typical Output Speed | Hardware |
@@ -336,7 +350,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 17 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -356,6 +370,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
+  | Synap | qwen3-coder-30b | 10 | 10 | ✅ Yes — `https://synap402.com/v1` | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
@@ -398,6 +413,7 @@ PROVIDERS = {
     "zhipu":       ("https://open.bigmodel.cn/api/paas/v4/",              "glm-4-flash"),
     "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
+    "synap":       ("https://synap402.com/v1",                            "qwen3-coder-30b"),
 }
 ```
 
