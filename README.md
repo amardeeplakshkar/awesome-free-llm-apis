@@ -413,6 +413,7 @@ PROVIDERS = {
     "zhipu":       ("https://open.bigmodel.cn/api/paas/v4/",              "glm-4-flash"),
     "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
+    "synap":       ("https://synap402.com/v1",                            "qwen3-coder-30b"),
 }
 ```
 
