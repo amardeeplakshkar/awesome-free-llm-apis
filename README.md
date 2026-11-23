@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-18-orange)
+![Providers](https://img.shields.io/badge/providers-20-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -372,7 +372,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
-  | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ | 🟡 |
+  | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
