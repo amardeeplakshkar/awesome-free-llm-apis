@@ -324,7 +324,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ### [CrowLLM](https://crowllm.com/sign-up) 🇹🇷
 
-  > OpenAI-compatible gateway with a permanent zero shelf: one key reaches 147 hosted models, 39 of them carry a `:free` id and 31 are priced at zero — no card, no countdown, and both the catalogue and each price are readable without a key.
+  > OpenAI-compatible gateway with a permanent zero shelf: one key reaches the whole hosted catalogue, and a rotating set of ids ending in `:free` sits on the free-account shelf — 31 of them priced at zero on 2026-11-23. No card, no countdown; the catalogue and every price are readable without a key, so the current free set can be re-checked instead of trusted.
 
   | Detail | Info |
   |---|---|
