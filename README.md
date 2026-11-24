@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-18-orange)
+![Providers](https://img.shields.io/badge/providers-20-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty, Runcrate
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -335,6 +335,19 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | **Speed Tier** | 🟡 Medium (default, not measured) |
 
   > One free allowance per GitHub account that is at least 30 days old. Past the free usage, a workspace with credit pays half the list price on shared capacity.
+  ### [CrowLLM](https://crowllm.com/sign-up) 🇹🇷
+
+  > OpenAI-compatible gateway with a permanent zero shelf: one key reaches the whole hosted catalogue, and a rotating set of ids ending in `:free` sits on the free-account shelf — 31 of them priced at zero on 2026-11-23. No card, no countdown; the catalogue and every price are readable without a key, so the current free set can be re-checked instead of trusted.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | Grok 4.7, Gemma 4 31B, GLM-5.3 Flash Thinking, Nemotron 3.5 Super VL 120B, LongCat 2.5 + 26 more `:free` ids (31 of 39 priced at 0 in the [public feed](https://crowllm.com/api/pricing)) |
+  | **Rate Limits** | Undocumented — no published RPM/RPD; limits are enforced per account group and the 429 message names the bound |
+  | **OpenAI Compat** | ✅ Yes — `https://crowllm.com/v1` (plus Anthropic `/v1/messages` on the bare origin and Gemini `/v1beta` native) |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai` and `crowllm-ai-sdk`), REST, MCP server (`crowllm-mcp`) |
+  | **Speed Tier** | 🟡 Medium |
+
+  > 💡 **Standout feature:** `GET /v1/models` and `GET /api/pricing` answer anonymously, so a script can diff the free shelf and its per-token rates before signing up. Eight of the 39 `:free` ids bill a small per-token rate; the other 31 are zero.
 
   ---
 
@@ -352,7 +365,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 16 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 18 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -373,6 +386,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
   | Runcrate | DeepSeek V4.1 Flash | Undocumented | weekly, dashboard only | ✅ | 🟡 |
+  | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
@@ -416,6 +430,7 @@ PROVIDERS = {
     "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
     "runcrate":    ("https://api.runcrate.ai/v1",                         "deepseek-ai/DeepSeek-V4.1-Flash"),
+    "crowllm":     ("https://crowllm.com/v1",                             "grok-4.7:free"),
 }
 ```
 
@@ -444,6 +459,8 @@ Looking for something specific? These searches might help:
 - **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
 - **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
 - **Which keyless endpoints are answering right now** → [stillworks](https://stillworks.supercapybara.com) — Directories list. We check. Endpoints probed on a schedule with a real chat completion, failures published next to the successes
+- **Compare free LLM APIs across 70+ providers** → [freellm.site](https://www.freellm.site) — Open-source (MIT) directory of free LLM API tiers with rate limits, context windows and credit-card requirements; data published as JSON
+- **Free LLM APIs, each entry dated and sourced** → [freellmapihub.com](https://freellmapihub.com) — Open-source (MIT) dataset of 62 free LLM and AI-model APIs, each with its last-verified date and a link to the provider's own docs; ongoing free tiers listed apart from trial credits, with no-card, no-phone and commercial-use flags; JSON API and CSV
 
 ---
 
