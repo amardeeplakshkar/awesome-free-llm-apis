@@ -322,6 +322,17 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+  ### [cheapllm.shop](https://cheapllm.shop/signup) 🇫🇷
+
+  > Small inference service for one model, DeepSeek V4.1 Flash 1017. Currently in beta: free with no rate limit while the beta runs. After the beta every account keeps a permanent free tier (email sign-up, no credit card). Disclosure: added by the operator.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | DeepSeek V4.1 Flash 1017 (`deepseek-v4.1-flash-1017`, text + image input, reasoning) |
+  | **Rate Limits** | None during the beta · afterwards at least 5,000 input + 1,000 output tokens per hour per account ([source](https://cheapllm.shop/docs#free-tier)) |
+  | **OpenAI Compat** | ✅ Yes, `https://cheapllm.shop/v1` (plus Anthropic `/v1/messages` and `/v1/responses`) |
+  | **SDKs** | Python (via `openai` or `anthropic`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium, requests queue instead of returning 429 when busy |
   ### [Runcrate](https://www.runcrate.ai/inference/free) 🇺🇸
 
   > Free DeepSeek V4.1 Flash and four more open models for coding agents, with a GitHub sign-in and no credit card. Free usage is limited and resets every Monday. Verified 13 November 2026.
@@ -385,6 +396,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
+  | cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
   | Runcrate | DeepSeek V4.1 Flash | Undocumented | weekly, dashboard only | ✅ | 🟡 |
   | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
 
