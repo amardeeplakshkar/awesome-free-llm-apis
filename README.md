@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-20-orange)
+![Providers](https://img.shields.io/badge/providers-22-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate, NovAI, cheapllm.shop
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -389,7 +389,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 18 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 20 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -409,7 +409,8 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
-  | cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
+  | NovAI | GLM-4.7-Flash | 5 RPM | 10 RPD | ✅ | 🟡 |
+| cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
   | Runcrate | DeepSeek V4.1 Flash | Undocumented | weekly, dashboard only | ✅ | 🟡 |
   | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
 
@@ -456,6 +457,8 @@ PROVIDERS = {
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
     "runcrate":    ("https://api.runcrate.ai/v1",                         "deepseek-ai/DeepSeek-V4.1-Flash"),
     "crowllm":     ("https://crowllm.com/v1",                             "grok-4.7:free"),
+    "cheapllm":    ("https://cheapllm.shop/v1",                           "deepseek-v4.1-flash-1017"),
+    "novai":       ("https://aiapi-pro.com/v1",                           "glm-4.7-flash"),
 }
 ```
 
