@@ -459,6 +459,7 @@ Looking for something specific? These searches might help:
 - **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
 - **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
 - **Which keyless endpoints are answering right now** → [stillworks](https://stillworks.supercapybara.com) — Directories list. We check. Endpoints probed on a schedule with a real chat completion, failures published next to the successes
+- **Weekday-updated tracker of free LLM API tokens** → [Free LLM API Tokens](https://freellmapi.link) — weekday-updated tracker of 100+ free/free-tier LLM APIs with OpenAI compatibility, tokens/day and rate limits
 - **Compare free LLM APIs across 70+ providers** → [freellm.site](https://www.freellm.site) — Open-source (MIT) directory of free LLM API tiers with rate limits, context windows and credit-card requirements; data published as JSON
 - **Free LLM APIs, each entry dated and sourced** → [freellmapihub.com](https://freellmapihub.com) — Open-source (MIT) dataset of 62 free LLM and AI-model APIs, each with its last-verified date and a link to the provider's own docs; ongoing free tiers listed apart from trial credits, with no-card, no-phone and commercial-use flags; JSON API and CSV
 
