@@ -430,7 +430,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 | cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
   | Runcrate | DeepSeek V4.1 Flash | Undocumented | weekly, dashboard only | ✅ | 🟡 |
   | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
-    | Synap | qwen3-coder-30b | 10 | 10 | ✅ | 🟡 |
+  | Synap | qwen3-coder-30b | 10 | 10 | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
