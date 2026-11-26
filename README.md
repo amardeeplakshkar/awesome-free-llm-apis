@@ -6,7 +6,7 @@
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-20-orange)
+![Providers](https://img.shields.io/badge/providers-24-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -30,7 +30,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
-  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, UnoRouter, Api.Airforce, Requesty, Synap
+  - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate, NovAI, cheapllm.shop, Synap
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
   - [Code Snippets](#code-snippets)
@@ -322,17 +322,70 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
-  ### [Synap](https://synap402.com/login) 🇺🇸
+  ### [NovAI](https://aiapi-pro.com/free) 🇭🇰
 
-  > Self-hosted OpenAI-compatible gateway. Free tier runs on Linkrra-operated GPUs, not a resold third-party backend — no card required. Capped per account and per network address, whichever is reached first ([live terms](https://synap402.com/api/account/free-tier)).
+  > OpenAI-compatible gateway for Chinese frontier models (DeepSeek, Qwen, GLM, Kimi, MiniMax, Doubao, Hunyuan). A permanent free tier covers five small models; no credit card and no Chinese phone number required.
 
   | Detail | Info |
   |---|---|
-  | **Free Models** | qwen3-coder-30b (one free model; paid BYOK/credits unlock the rest of the catalog) |
-  | **Rate Limits** | 50,000 tokens/day · 10 RPD, permanently. 10 RPM per key. Also capped network-wide at 300,000 tokens/day · 150 RPD across all accounts — [live terms](https://synap402.com/api/account/free-tier) |
-  | **OpenAI Compat** | ✅ Yes — `https://synap402.com/v1` |
+  | **Free Models** | GLM-4.7-Flash, GLM-4.6V-Flash, GLM-4.1V-Thinking-Flash, CogView3-Flash (image), CogVideoX-Flash (video) |
+  | **Rate Limits** | 5 RPM · 10 RPD shared across the five free models · max 5 video generations/day ([documented limits](https://aiapi-pro.com/free)) |
+  | **OpenAI Compat** | ✅ Yes — `https://aiapi-pro.com/v1` |
+  | **SDKs** | Any OpenAI-compatible SDK (Python, JS/TS, Go); no vendor-specific SDK |
+  | **Speed Tier** | 🟡 Medium — gateway to upstream providers; per-model p50/p90 [measured here](https://aiapi-pro.com/blog/model-latency-measured-2026) |
+
+  > The five free models are permanent, not a trial. A separate $2 signup credit applies to paid models only.
+  ### [cheapllm.shop](https://cheapllm.shop/signup) 🇫🇷
+
+  > Small inference service for one model, DeepSeek V4.1 Flash 1017. Currently in beta: free with no rate limit while the beta runs. After the beta every account keeps a permanent free tier (email sign-up, no credit card). Disclosure: added by the operator.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | DeepSeek V4.1 Flash 1017 (`deepseek-v4.1-flash-1017`, text + image input, reasoning) |
+  | **Rate Limits** | None during the beta · afterwards at least 5,000 input + 1,000 output tokens per hour per account ([source](https://cheapllm.shop/docs#free-tier)) |
+  | **OpenAI Compat** | ✅ Yes, `https://cheapllm.shop/v1` (plus Anthropic `/v1/messages` and `/v1/responses`) |
+  | **SDKs** | Python (via `openai` or `anthropic`), JS/TS (via `openai`), REST |
+  | **Speed Tier** | 🟡 Medium, requests queue instead of returning 429 when busy |
+  ### [Runcrate](https://www.runcrate.ai/inference/free) 🇺🇸
+
+  > Free DeepSeek V4.1 Flash and four more open models for coding agents, with a GitHub sign-in and no credit card. Free usage is limited and resets every Monday. Verified 13 November 2026.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | DeepSeek V4.1 Flash, GLM 5.3 Flash, GLM 5.3, gpt-oss 120B, Qwen3.8 Flash |
+  | **Rate Limits** | Undocumented as a number: free usage is counted per workspace by the week and resets every Monday; the amount left is shown in the dashboard ([source](https://www.runcrate.ai/inference/free)) |
+  | **OpenAI Compat** | ✅ Yes, `https://api.runcrate.ai/v1` |
   | **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
-  | **Speed Tier** | 🟡 Medium — standard cloud GPUs |
+  | **Speed Tier** | 🟡 Medium (default, not measured) |
+
+  > One free allowance per GitHub account that is at least 30 days old. Past the free usage, a workspace with credit pays half the list price on shared capacity.
+  ### [CrowLLM](https://crowllm.com/sign-up) 🇹🇷
+
+  > OpenAI-compatible gateway with a permanent zero shelf: one key reaches the whole hosted catalogue, and a rotating set of ids ending in `:free` sits on the free-account shelf — 31 of them priced at zero on 2026-11-23. No card, no countdown; the catalogue and every price are readable without a key, so the current free set can be re-checked instead of trusted.
+
+  | Detail | Info |
+  |---|---|
+  | **Free Models** | Grok 4.7, Gemma 4 31B, GLM-5.3 Flash Thinking, Nemotron 3.5 Super VL 120B, LongCat 2.5 + 26 more `:free` ids (31 of 39 priced at 0 in the [public feed](https://crowllm.com/api/pricing)) |
+  | **Rate Limits** | Undocumented — no published RPM/RPD; limits are enforced per account group and the 429 message names the bound |
+  | **OpenAI Compat** | ✅ Yes — `https://crowllm.com/v1` (plus Anthropic `/v1/messages` on the bare origin and Gemini `/v1beta` native) |
+  | **SDKs** | Python (via `openai`), JS/TS (via `openai` and `crowllm-ai-sdk`), REST, MCP server (`crowllm-mcp`) |
+  | **Speed Tier** | 🟡 Medium |
+
+  > 💡 **Standout feature:** `GET /v1/models` and `GET /api/pricing` answer anonymously, so a script can diff the free shelf and its per-token rates before signing up. Eight of the 39 `:free` ids bill a small per-token rate; the other 31 are zero.
+
+---
+
+### [Synap](https://synap402.com/login) 🇺🇸
+
+> Self-hosted OpenAI-compatible gateway. Free tier runs on Linkrra-operated GPUs, not a resold third-party backend - no card required. Google or email sign-in, no card. Capped per account and per network address, whichever is reached first ([live terms](https://synap402.com/api/account/free-tier)).
+
+| Detail | Info |
+|--------|------|
+| **Free Models** | qwen3-coder-30b (one free model; paid BYOK/credits unlock the rest of the catalog) |
+| **Rate Limits** | 50,000 tokens/day and 10 requests/day permanently. 10 RPM per key. Also capped network-wide at 300,000 tokens/day and 150 requests/day across all accounts - [live terms](https://synap402.com/api/account/free-tier) |
+| **OpenAI Compat** | ✅ Yes - `https://synap402.com/v1` |
+| **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+| **Speed Tier** | 🟡 Medium - standard cloud GPUs |
 
   ---
 
@@ -350,7 +403,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 17 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 24 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -367,10 +420,17 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | NVIDIA NIM | Qwen3 235B | 40 | — | ✅ | 🟡 |
   | Hugging Face | Llama 3.3 70B | — | credit-based | ✅ | 🔴 |
   | Cloudflare Workers AI | Llama 3.3 70B | — | 10K neurons | ⚠️ | 🟡 |
+  | Kluster AI | DeepSeek-R1 | Undocumented | Undocumented | ✅ | 🟡 |
+  | LLM7.io | DeepSeek R1 | 15-30 | Undocumented | ✅ | 🟡 |
+  | OpenClaw AI | deepseek-r1 | Undocumented | 50,000 sats/day | ✅ | 🟡 |
   | Pollinations AI | openai-large + image/video/audio | — | hourly reset | ✅ | 🟡 |
   | UnoRouter | DeepSeek V4 Pro (free) | 1/model | — | ✅ | 🟡 |
   | Requesty | Nemotron 3 Ultra 550B | Undocumented | 200 | ✅ | 🟡 |
-  | Synap | qwen3-coder-30b | 10 | 10 | ✅ Yes — `https://synap402.com/v1` | 🟡 |
+  | NovAI | GLM-4.7-Flash | 5 RPM | 10 RPD | ✅ | 🟡 |
+| cheapllm.shop | DeepSeek V4.1 Flash 1017 | None (beta) | None (beta) | ✅ | 🟡 |
+  | Runcrate | DeepSeek V4.1 Flash | Undocumented | weekly, dashboard only | ✅ | 🟡 |
+  | CrowLLM | Grok 4.7 (free) | Undocumented | Undocumented | ✅ Yes — `https://crowllm.com/v1` | 🟡 |
+    | Synap | qwen3-coder-30b | 10 | 10 | ✅ | 🟡 |
 
   > \* Mistral free tier is token-volume capped (1B tokens/month), not RPD capped.
 
@@ -413,7 +473,11 @@ PROVIDERS = {
     "zhipu":       ("https://open.bigmodel.cn/api/paas/v4/",              "glm-4-flash"),
     "pollinations": ("https://gen.pollinations.ai/v1",                    "openai-large"),  # no key needed for basic use
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
-    "synap":       ("https://synap402.com/v1",                            "qwen3-coder-30b"),
+    "synap": ("https://synap402.com/v1", "qwen3-coder-30b"),
+    "runcrate":    ("https://api.runcrate.ai/v1",                         "deepseek-ai/DeepSeek-V4.1-Flash"),
+    "crowllm":     ("https://crowllm.com/v1",                             "grok-4.7:free"),
+    "cheapllm":    ("https://cheapllm.shop/v1",                           "deepseek-v4.1-flash-1017"),
+    "novai":       ("https://aiapi-pro.com/v1",                           "glm-4.7-flash"),
 }
 ```
 
@@ -442,7 +506,10 @@ Looking for something specific? These searches might help:
 - **Free Llama API** → Groq, Cerebras, OpenRouter, GitHub Models all offer free Llama 3.3 70B
 - **Free DeepSeek API** → OpenRouter, Kluster AI, LLM7.io, GitHub Models
 - **Which keyless endpoints are answering right now** → [stillworks](https://stillworks.supercapybara.com) — Directories list. We check. Endpoints probed on a schedule with a real chat completion, failures published next to the successes
+- **How to tell if a cheap reseller is actually serving the model you asked for** → [free-ai-api-list](https://github.com/robertclaw496-alt/free-ai-api-list#%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D1%87%D1%82%D0%BE-%D0%BF%D1%80%D0%BE%D0%B2%D0%B0%D0%B9%D0%B4%D0%B5%D1%80-%D0%BE%D1%82%D0%B4%D0%B0%D1%91%D1%82-%D0%B7%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%83%D1%8E-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C) — two heuristics you can run yourself with curl and jq: ask for a hard token cap (check `completion_tokens`, not `finish_reason`) and compare replies across model names at temperature 0. Neither is proof on its own; the section explains what corroborates a suspicion
+- **Weekday-updated tracker of free LLM API tokens** → [Free LLM API Tokens](https://freellmapi.link) — weekday-updated tracker of 100+ free/free-tier LLM APIs with OpenAI compatibility, tokens/day and rate limits
 - **Compare free LLM APIs across 70+ providers** → [freellm.site](https://www.freellm.site) — Open-source (MIT) directory of free LLM API tiers with rate limits, context windows and credit-card requirements; data published as JSON
+- **Free LLM APIs, each entry dated and sourced** → [freellmapihub.com](https://freellmapihub.com) — Open-source (MIT) dataset of 62 free LLM and AI-model APIs, each with its last-verified date and a link to the provider's own docs; ongoing free tiers listed apart from trial credits, with no-card, no-phone and commercial-use flags; JSON API and CSV
 
 ---
 
