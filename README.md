@@ -1,12 +1,12 @@
 # awesome-free-llm-apis 🧠
 
-> A curated list of 24 permanently free LLM APIs - with rate limits, OpenAI SDK compatibility, available SDKs, speed tiers, and free model lists. No trial credits. No time-limited promos. No credit card required.
+> A curated list of 25 permanently free LLM APIs - with rate limits, OpenAI SDK compatibility, available SDKs, speed tiers, and free model lists. No trial credits. No time-limited promos. No credit card required.
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)
 ![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)
-![Providers](https://img.shields.io/badge/providers-24-orange)
+![Providers](https://img.shields.io/badge/providers-25-orange)
 
 **Keywords:** `free LLM API` · `free AI API` · `OpenAI compatible API` · `free GPT API` · `free Llama API` · `free inference API` · `LLM API key` · `no credit card AI API` · `free tier AI` · `open source LLM hosting`
 
@@ -29,10 +29,12 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 ## Contents
 
 - [Provider APIs](#provider-apis) — companies that train or fine-tune their own models
+  - includes Google Gemini, Mistral AI, Cohere, Zhipu AI, Merkium
 - [Inference Providers](#inference-providers) — third-party platforms hosting open-weight models
   - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate, NovAI, cheapllm.shop, Synap
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
+
   - [Code Snippets](#code-snippets)
   - [Contributing](#contributing)
 
@@ -102,9 +104,24 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ---
 
+### [Merkium](https://www.merkium.nl) 🇳🇱
+
+> Independent AI lab in the Netherlands running its own models, with a free OpenAI-compatible API and no credit card required.
+
+| Detail | Info |
+|---|---|
+| **Free Models** | ganymede-1.1, pluto-1.2-flash, pluto-1.2-pro, ceres-1.0 + more |
+| **Rate Limits** | 30 RPM per key · daily quota Undocumented ([pricing](https://www.merkium.nl/pricing)) |
+| **OpenAI Compat** | ✅ Yes - `https://chat.merkium.nl/api/v1` |
+| **SDKs** | Python (via `openai`), JS/TS (via `openai`), REST |
+| **Speed Tier** | 🟡 Medium (default, not measured) |
+
+---
   ## Inference Providers — Free Third-Party LLM Hosting
 
   Third-party platforms hosting open-weight models from various sources (Meta, Mistral, DeepSeek, etc.). These are **free AI inference APIs** — no need to self-host.
+
+
 
   ---
 
@@ -403,7 +420,7 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
 
   ## Quick Comparison — Free LLM APIs at a Glance
 
-  All 24 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
+  All 25 **free LLM API providers** side by side. Sorted by category (provider-first, then inference). Use this to pick the right free AI API for your use case before diving into the full entry above.
 
   | Provider | Best Free Model | RPM | RPD | OpenAI Compat | Speed |
   |---|---|---|---|---|---|
@@ -411,10 +428,14 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Mistral AI | Mistral Large 3 | 60 | Unlimited* | ✅ | 🟡 |
   | Cohere | Command A | 20 | ~33/day | ⚠️ | 🟡 |
   | Zhipu AI | GLM-4.7-Flash | — | — | ✅ | 🟡 |
+  | Merkium | ganymede-1.1 | 30 | Undocumented | ✅ | 🟡 |
   | Groq | Llama 3.3 70B | 30 | 14,400 | ✅ | 🟢 |
+
+
   | AnyAPI | Llama 3.3 70B | 20 | 200 | ✅ | 🟡 |
   | Cerebras | Qwen3 235B | 30 | 14,400 | ✅ | 🟢 |
   | OpenRouter | Qwen3 Coder 480B | 20 | 200 | ✅ | 🟡 |
+
   | Api.Airforce | GPT-OSS-120B | — | — | ✅ | 🟢 |
   | GitHub Models | GPT-4o | 10–15 | 50–150 | ✅ | 🟡 |
   | NVIDIA NIM | Qwen3 235B | 40 | — | ✅ | 🟡 |
@@ -475,6 +496,7 @@ PROVIDERS = {
     "requesty":    ("https://router.requesty.ai/v1",                      "nvidia/nemotron-3-super-120b-a12b"),
     "synap": ("https://synap402.com/v1", "qwen3-coder-30b"),
     "runcrate":    ("https://api.runcrate.ai/v1",                         "deepseek-ai/DeepSeek-V4.1-Flash"),
+    "merkium": ("https://chat.merkium.nl/api/v1", "ganymede-1.1"),
     "crowllm":     ("https://crowllm.com/v1",                             "grok-4.7:free"),
     "cheapllm":    ("https://cheapllm.shop/v1",                           "deepseek-v4.1-flash-1017"),
     "novai":       ("https://aiapi-pro.com/v1",                           "glm-4.7-flash"),
