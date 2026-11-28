@@ -34,7 +34,6 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   - includes Groq, Cerebras, OpenRouter, GitHub Models, NVIDIA NIM, Hugging Face, Cloudflare, Kluster AI, LLM7.io, Pollinations AI, CrowLLM, UnoRouter, Api.Airforce, Requesty, Runcrate, NovAI, cheapllm.shop, Synap
   - [Speed Tier Legend](#speed-tier-legend)
   - [Quick Comparison Table](#quick-comparison-table)
-
   - [Code Snippets](#code-snippets)
   - [Contributing](#contributing)
 
@@ -120,8 +119,6 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   ## Inference Providers — Free Third-Party LLM Hosting
 
   Third-party platforms hosting open-weight models from various sources (Meta, Mistral, DeepSeek, etc.). These are **free AI inference APIs** — no need to self-host.
-
-
 
   ---
 
@@ -430,16 +427,13 @@ Most "free LLM API" lists give you a name and a link. This one gives you everyth
   | Zhipu AI | GLM-4.7-Flash | — | — | ✅ | 🟡 |
   | Merkium | ganymede-1.1 | 30 | Undocumented | ✅ | 🟡 |
   | Groq | Llama 3.3 70B | 30 | 14,400 | ✅ | 🟢 |
-
-
   | AnyAPI | Llama 3.3 70B | 20 | 200 | ✅ | 🟡 |
   | Cerebras | Qwen3 235B | 30 | 14,400 | ✅ | 🟢 |
-  | OpenRouter | Qwen3 Coder 480B | 20 | 200 | ✅ | 🟡 |
-
+  | OpenRouter | Qwen3 Coder 480B | 20 | 200 | ✅  🟡 |
   | Api.Airforce | GPT-OSS-120B | — | — | ✅ | 🟢 |
   | GitHub Models | GPT-4o | 10–15 | 50–150 | ✅ | 🟡 |
   | NVIDIA NIM | Qwen3 235B | 40 | — | ✅ | 🟡 |
-  | Hugging Face | Llama 3.3 70B | — | credit-based | ✅ | 🔴 |
+  | Hugging Face | Llama 3.3 70B | — | credit-bsed | ✅ | 🔴 |
   | Cloudflare Workers AI | Llama 3.3 70B | — | 10K neurons | ⚠️ | 🟡 |
   | Kluster AI | DeepSeek-R1 | Undocumented | Undocumented | ✅ | 🟡 |
   | LLM7.io | DeepSeek R1 | 15-30 | Undocumented | ✅ | 🟡 |
