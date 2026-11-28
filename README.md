@@ -1,6 +1,6 @@
 # awesome-free-llm-apis 🧠
 
-> A curated list of **permanently free LLM APIs** — with rate limits, OpenAI SDK compatibility, available SDKs, speed tiers, and free model lists. No trial credits. No time-limited promos. No credit card required.
+> A curated list of 24 permanently free LLM APIs - with rate limits, OpenAI SDK compatibility, available SDKs, speed tiers, and free model lists. No trial credits. No time-limited promos. No credit card required.
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 ![Last Verified](https://img.shields.io/badge/last%20verified-March%202026-brightgreen)
